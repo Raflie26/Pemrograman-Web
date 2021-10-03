@@ -11,13 +11,11 @@
 
     <title>Tugas Form</title>
   </head>
-  <body class="bg-light">
+  <body>
 
-  <!-- Raflie Firmansyah - 2019071017-->
-  <!-- Tugas Pemrograman Web -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Universitas Pembangunan Jaya</a>
+        <a class="navbar-brand" href="#">Navbar</a>
       </div>
     </nav>
 
@@ -25,9 +23,8 @@
       <h4 class="text-center mt-4 bg-dark text-light" style="padding: 20px; border-radius: 8px;">Pendaftaran Mahasiswa Baru</h4>
     </div>
     
-    <div class="container my-4 p-5 border border-4 border-dark rounded" style="background-color: #fff;">
-      <h4 class="text-center">Form Registrasi</h4>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <div class="container my-4" style="background-color: #fff;">
+      <form action="konfirmasipmb.php" method="post">
       <div class="row justify-content-center">
         <div class="col-md-5 my-3">
           <label for="">Jalur Penerimaan Mahasiswa Baru</label>
@@ -35,6 +32,8 @@
             <option selected>Pilih</option>
             <option value="TA 2022/2023 Rata-rata raport">TA 2022/2023 Rata-rata raport</option>
             <option value="TA 2022/2023 Rata-rata raport">TA 2022/2023 Peringkat kelas</option>
+            <option value="TA 2022/2023 Rata-rata raport">TA 2022/2023 USM</option>
+            <option value="TA 2022/2023 Rata-rata raport">TA 2022/2023 USM</option>
             <option value="TA 2022/2023 Rata-rata raport">TA 2022/2023 USM</option>
           </select>
         </div>
@@ -233,66 +232,6 @@
       </div>
       </form>
     </div>
-
-    <?php 
-      if (isset($_POST['tombol'])) {
-        $jalur = $_POST["jalur"];
-        $nama = $_POST['nama'];
-        $ttl = $_POST['ttl'];
-        $nik = $_POST['nik'];
-        $jeniskelamin = $_POST['jeniskelamin'];
-        $agama = $_POST['agama'];
-        $status = $_POST['status'];
-        $alamat = $_POST['alamat'];
-        $kodepos = $_POST['kodepos'];
-        $email = $_POST['email'];
-        $nama_ayah = $_POST['namaayah'];
-        $nama_ibu = $_POST['namaibu'];
-        $alamat2 = $_POST['alamat2'];
-        $kodepos2 = $_POST['kodepos2'];
-        $email2 = $_POST['email2'];
-        $pendidikanayah = $_POST['pendidikanayah'];
-        $pendidikanibu = $_POST['pendidikanibu'];
-        $statusayah = $_POST['statusayah'];
-        $statusibu = $_POST['statusibu'];
-        $pekerjaanayah = $_POST['pekerjaanayah'];
-        $pekerjaanibu = $_POST['pekerjaanibu'];
-        $programstudi1 = $_POST['programstudi1'];
-        $programstudi2 = $_POST['programstudi2'];
-        $sumber = $_POST['sumber'];
-        $gelombang = $_POST['gelombang'];
-        
-        echo"<div class='output'>";
-        echo "<br><h2 class='text-center'>Output Pendaftaran : </h2>";
-        echo "<p class='output2'>Jalur Penerimaan :".$jalur."</p>";
-        echo "<p class='output2'>Nama Lengkap :".$nama."</p>";
-        echo "<p class='output2'>Tempat Tanggal Lahir  :".$ttl."</p>";
-        echo "<p class='output2'>Nomor Induk Kependudukan  :".$nik."</p>";
-        echo "<p class='output2'>Jenis Kelamin :".$jeniskelamin."</p>";
-        echo "<p class='output2'>Agama :".$agama."</p>";
-        echo "<p class='output2'>Status  :".$status."</p>";
-        echo "<p class='output2'>Alamat :".$alamat."</p>";
-        echo "<p class='output2'>Kode Pos :".$kodepos."</p>";
-        echo "<p class='output2'>Email :".$email."</p>";
-        echo "<p class='output2'>Nama Ayah :".$nama_ayah."</p>";
-        echo "<p class='output2'>Nama Ibu :".$nama_ibu."</p>";
-        echo "<p class='output2'>Alamat Orang Tua :".$alamat2."</p>";
-        echo "<p class='output2'>Kode Pos :".$kodepos2."</p>";
-        echo "<p class='output2'>Email Orang Tua:".$email2."</p>";
-        echo "<p class='output2'>Pendidikan Ayah :".$pendidikanayah."</p>";
-        echo "<p class='output2'>Pendidikan Ibu :".$pendidikanibu."</p>";
-        echo "<p class='output2'>Status Ayah :".$statusayah."</p>";
-        echo "<p class='output2'>Status Ibu :".$statusibu."</p>";
-        echo "<p class='output2'>Pekerjaan Ayah :".$pekerjaanayah."</p>";
-        echo "<p class='output2'>Pekerjaan Ibu :".$pekerjaanibu."</p>";
-        echo "<p class='output2'>Program studi 1 :".$programstudi1."</p>";
-        echo "<p class='output2'>Program studi 2 :".$programstudi2."</p>";
-        echo "<p class='output2'>Sumber :".$sumber."</p>";
-        echo "<p class='output2'>Gelombang :".$gelombang."</p>";
-        echo "</div>";
-      }
-?>
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 
